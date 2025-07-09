@@ -55,3 +55,8 @@ if st.session_state.partnership_data:
         file_name="orphanage_partnerships.csv",
         mime="text/csv"
     )
+
+    # Bar chart for total donations by Partnership Type
+    st.subheader("Total Donations by Partnership Type")
+    chart_data = df.groupby("Partnership Type")["Amount (UGX)"].sum().reset_index()
+    st.bar_chart(chart_data.set_index("Partnership Type"))
