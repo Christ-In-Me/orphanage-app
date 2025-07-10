@@ -62,10 +62,10 @@ if submit_button:
         st.session_state.form_key += 1
         st.rerun()
 
-# Debug: Display session state info
-st.write(f"Number of entries in session state: {len(st.session_state.partnership_data)}")
-if st.session_state.partnership_data:
-    st.write("Raw session state data:", st.session_state.partnership_data)
+# Debug: Comment out for production, uncomment for troubleshooting
+# st.write(f"Number of entries in session state: {len(st.session_state.partnership_data)}")
+# if st.session_state.partnership_data:
+#     st.write("Raw session state data:", st.session_state.partnership_data)
 
 # Display collected data
 if st.session_state.partnership_data:
